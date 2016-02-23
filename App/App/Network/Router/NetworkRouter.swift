@@ -58,6 +58,7 @@ extension TargetType {
 struct NetworkRouter {
     static let baseURLString = "https://api.github.com"
     
+    // Test
     enum GitHub {
         case Zen
         case UserProfile(String)

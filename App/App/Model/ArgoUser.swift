@@ -10,6 +10,10 @@ import Foundation
 import Argo
 import Curry
 
+
+/**
+ *  Test Model
+ */
 struct ArgoUser {
     let id: Int
     let name: String
