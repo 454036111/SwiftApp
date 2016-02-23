@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Argo.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Curry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Moya.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,7 +47,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0D6EF8830A1276554546425858F3506A</key>
+		<key>28E618D9359494C1A68D1922E59D48BE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>56CC310C848A1D5039D8A2104AAEACCC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5D2CA4FA10B4B3D9CB5716ED97968717</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>74430187A7BCF45F76351E942D2FFD58</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -58,11 +83,6 @@
 			<true/>
 		</dict>
 		<key>E5678FC69B99077E1972D149186B2285</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E8DE5E51664A1730F16FA92AFD2AF97B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

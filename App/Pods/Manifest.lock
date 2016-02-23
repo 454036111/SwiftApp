@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (3.2.0)
+  - Argo (2.2.0)
+  - Curry (1.4.0)
   - Moya (6.1.3):
     - Moya/Core (= 6.1.3)
   - Moya/Core (6.1.3):
@@ -13,12 +15,16 @@ PODS:
   - SnapKit (0.19.1)
 
 DEPENDENCIES:
+  - Argo (~> 2.2.0)
+  - Curry (~> 1.4.0)
   - Moya (~> 6.1.3)
   - Moya/RxSwift
   - SnapKit (~> 0.19.1)
 
 SPEC CHECKSUMS:
   Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
+  Argo: 4f52a32b4cd913c204e5a45f420b3fccad3e3f24
+  Curry: 294533187eedbf52db60a1e70c29b4f5c9f621c0
   Moya: 26b290a8d675c167ea6229ba08e07dce562265a5
   Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
   RxSwift: b8a749f2204c6c7a5c29b306a9c3bc11d5b87c5b

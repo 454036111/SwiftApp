@@ -85,6 +85,8 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/Alamofire.framework"
+  install_framework "Pods/Argo.framework"
+  install_framework "Pods/Curry.framework"
   install_framework "Pods/Moya.framework"
   install_framework "Pods/Result.framework"
   install_framework "Pods/RxSwift.framework"
@@ -92,6 +94,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/Alamofire.framework"
+  install_framework "Pods/Argo.framework"
+  install_framework "Pods/Curry.framework"
   install_framework "Pods/Moya.framework"
   install_framework "Pods/Result.framework"
   install_framework "Pods/RxSwift.framework"

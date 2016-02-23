@@ -8,11 +8,23 @@
 
 import UIKit
 
+
+
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        NetworkProcess.userRepositories("ohroj", success: { [weak self](ret) -> () in
+            print(ret)
+            
+            }) { (err) -> () in
+                
+              print(err)
+        }
+
+        
     }
 
     override func didReceiveMemoryWarning() {

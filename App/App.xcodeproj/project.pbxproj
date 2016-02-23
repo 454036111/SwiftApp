@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24498F601C7C5D97005A6611 /* ArgoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24498F5F1C7C5D97005A6611 /* ArgoUser.swift */; };
+		24498F621C7C5E75005A6611 /* NetworkProcessGithub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24498F611C7C5E75005A6611 /* NetworkProcessGithub.swift */; };
+		24498F641C7C6873005A6611 /* Observable+Argo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24498F631C7C6873005A6611 /* Observable+Argo.swift */; };
 		245DFDEB1C7C0E94009FADFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245DFDEA1C7C0E94009FADFB /* AppDelegate.swift */; };
 		245DFDED1C7C0E94009FADFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245DFDEC1C7C0E94009FADFB /* ViewController.swift */; };
 		245DFDF01C7C0E94009FADFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245DFDEE1C7C0E94009FADFB /* Main.storyboard */; };
@@ -15,6 +18,10 @@
 		245DFE001C7C0E94009FADFB /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245DFDFF1C7C0E94009FADFB /* AppTests.swift */; };
 		245DFE0B1C7C0E94009FADFB /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245DFE0A1C7C0E94009FADFB /* AppUITests.swift */; };
 		245DFE191C7C1243009FADFB /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 245DFE181C7C1243009FADFB /* README.md */; };
+		245DFE2F1C7C49B4009FADFB /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245DFE2E1C7C49B4009FADFB /* NetworkRouter.swift */; };
+		245DFE311C7C49C3009FADFB /* NetworkProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245DFE301C7C49C3009FADFB /* NetworkProcess.swift */; };
+		245DFE331C7C4BA3009FADFB /* NetworkRouterGithub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245DFE321C7C4BA3009FADFB /* NetworkRouterGithub.swift */; };
+		24765C8D1C7C567100124142 /* Response+Argo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24765C8C1C7C567100124142 /* Response+Argo.swift */; };
 		63FBFD6750CFAA993D515359 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D480C32AB988FD03F5B4695E /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +44,9 @@
 
 /* Begin PBXFileReference section */
 		008C2EAB83026B4B675BF77A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		24498F5F1C7C5D97005A6611 /* ArgoUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArgoUser.swift; sourceTree = "<group>"; };
+		24498F611C7C5E75005A6611 /* NetworkProcessGithub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProcessGithub.swift; sourceTree = "<group>"; };
+		24498F631C7C6873005A6611 /* Observable+Argo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Observable+Argo.swift"; path = "../Router/Observable+Argo.swift"; sourceTree = "<group>"; };
 		245DFDE71C7C0E94009FADFB /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		245DFDEA1C7C0E94009FADFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		245DFDEC1C7C0E94009FADFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +61,10 @@
 		245DFE0A1C7C0E94009FADFB /* AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITests.swift; sourceTree = "<group>"; };
 		245DFE0C1C7C0E94009FADFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		245DFE181C7C1243009FADFB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		245DFE2E1C7C49B4009FADFB /* NetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		245DFE301C7C49C3009FADFB /* NetworkProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProcess.swift; sourceTree = "<group>"; };
+		245DFE321C7C4BA3009FADFB /* NetworkRouterGithub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRouterGithub.swift; sourceTree = "<group>"; };
+		24765C8C1C7C567100124142 /* Response+Argo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Response+Argo.swift"; path = "../Router/Response+Argo.swift"; sourceTree = "<group>"; };
 		8EEB310B6B6D8D230DD634A5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D480C32AB988FD03F5B4695E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -81,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24498F651C7C6A30005A6611 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				24765C8C1C7C567100124142 /* Response+Argo.swift */,
+				24498F631C7C6873005A6611 /* Observable+Argo.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		245DFDDE1C7C0E94009FADFB = {
 			isa = PBXGroup;
 			children = (
@@ -106,8 +129,13 @@
 		245DFDE91C7C0E94009FADFB /* App */ = {
 			isa = PBXGroup;
 			children = (
-				245DFDEA1C7C0E94009FADFB /* AppDelegate.swift */,
+				245DFE231C7C18B9009FADFB /* Util */,
+				245DFE1F1C7C1817009FADFB /* Controller */,
+				245DFE201C7C182D009FADFB /* Model */,
+				245DFE211C7C182D009FADFB /* Network */,
+				245DFE221C7C182D009FADFB /* View */,
 				245DFDEC1C7C0E94009FADFB /* ViewController.swift */,
+				245DFDEA1C7C0E94009FADFB /* AppDelegate.swift */,
 				245DFDEE1C7C0E94009FADFB /* Main.storyboard */,
 				245DFDF11C7C0E94009FADFB /* Assets.xcassets */,
 				245DFDF31C7C0E94009FADFB /* LaunchScreen.storyboard */,
@@ -133,6 +161,63 @@
 				245DFE0C1C7C0E94009FADFB /* Info.plist */,
 			);
 			path = AppUITests;
+			sourceTree = "<group>";
+		};
+		245DFE1F1C7C1817009FADFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		245DFE201C7C182D009FADFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				24498F5F1C7C5D97005A6611 /* ArgoUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		245DFE211C7C182D009FADFB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				24498F651C7C6A30005A6611 /* Extension */,
+				245DFE2C1C7C492A009FADFB /* Router */,
+				245DFE2D1C7C493C009FADFB /* Process */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		245DFE221C7C182D009FADFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		245DFE231C7C18B9009FADFB /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		245DFE2C1C7C492A009FADFB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				245DFE2E1C7C49B4009FADFB /* NetworkRouter.swift */,
+				245DFE321C7C4BA3009FADFB /* NetworkRouterGithub.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		245DFE2D1C7C493C009FADFB /* Process */ = {
+			isa = PBXGroup;
+			children = (
+				245DFE301C7C49C3009FADFB /* NetworkProcess.swift */,
+				24498F611C7C5E75005A6611 /* NetworkProcessGithub.swift */,
+			);
+			path = Process;
 			sourceTree = "<group>";
 		};
 		9880A2D942AFF0AD4F7A3140 /* Frameworks */ = {
@@ -335,7 +420,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				245DFE191C7C1243009FADFB /* README.md in Sources */,
+				24498F601C7C5D97005A6611 /* ArgoUser.swift in Sources */,
+				245DFE2F1C7C49B4009FADFB /* NetworkRouter.swift in Sources */,
+				24498F641C7C6873005A6611 /* Observable+Argo.swift in Sources */,
 				245DFDED1C7C0E94009FADFB /* ViewController.swift in Sources */,
+				24765C8D1C7C567100124142 /* Response+Argo.swift in Sources */,
+				245DFE311C7C49C3009FADFB /* NetworkProcess.swift in Sources */,
+				24498F621C7C5E75005A6611 /* NetworkProcessGithub.swift in Sources */,
+				245DFE331C7C4BA3009FADFB /* NetworkRouterGithub.swift in Sources */,
 				245DFDEB1C7C0E94009FADFB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
