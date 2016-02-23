@@ -14,6 +14,7 @@
 		245DFDF51C7C0E94009FADFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 245DFDF31C7C0E94009FADFB /* LaunchScreen.storyboard */; };
 		245DFE001C7C0E94009FADFB /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245DFDFF1C7C0E94009FADFB /* AppTests.swift */; };
 		245DFE0B1C7C0E94009FADFB /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245DFE0A1C7C0E94009FADFB /* AppUITests.swift */; };
+		245DFE191C7C1243009FADFB /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 245DFE181C7C1243009FADFB /* README.md */; };
 		63FBFD6750CFAA993D515359 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D480C32AB988FD03F5B4695E /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		245DFE061C7C0E94009FADFB /* AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		245DFE0A1C7C0E94009FADFB /* AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITests.swift; sourceTree = "<group>"; };
 		245DFE0C1C7C0E94009FADFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		245DFE181C7C1243009FADFB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		8EEB310B6B6D8D230DD634A5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D480C32AB988FD03F5B4695E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 				245DFDF11C7C0E94009FADFB /* Assets.xcassets */,
 				245DFDF31C7C0E94009FADFB /* LaunchScreen.storyboard */,
 				245DFDF61C7C0E94009FADFB /* Info.plist */,
+				245DFE181C7C1243009FADFB /* README.md */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				245DFE191C7C1243009FADFB /* README.md in Sources */,
 				245DFDED1C7C0E94009FADFB /* ViewController.swift in Sources */,
 				245DFDEB1C7C0E94009FADFB /* AppDelegate.swift in Sources */,
 			);
