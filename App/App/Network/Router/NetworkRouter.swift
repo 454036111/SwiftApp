@@ -46,6 +46,19 @@ extension TargetType {
     
 }
 
+extension Dictionary{
+    public func union(other: Dictionary?) -> Dictionary {
+        guard let other = other else{
+            return self
+        }
+        var temp = self
+        for (key,value) in other {
+            temp.updateValue(value, forKey:key)
+        }
+        return temp
+    }
+}
+
 
 
 
@@ -64,6 +77,18 @@ struct NetworkRouter {
         case UserProfile(String)
         case UserRepositories(String)
     }
+    
+    enum Search {
+        case Repositories(String, String, String, String?)
+        case Code(String, String, String, String?)
+        case Issues(String, String, String)
+        case Users(String, String, String)
+//        case TextMatch
+        
+    }
+    
+    
+    
     
 }
 

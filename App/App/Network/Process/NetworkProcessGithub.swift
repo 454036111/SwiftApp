@@ -11,15 +11,14 @@ import RxSwift
 
 extension NetworkProcess {
     // 这里就是对  NetworkRouter.GitHub 进行业务对
-    static func userRepositories(name: String, success: ArgoUser? -> (), failure: ErrorHandle? = .None) {
+    static func userRepositories(name: String, success: [ArgoUser]? -> (), failure: ErrorHandle? = .None) {
         NetworkRouter.GitHub.Provider
-            .request(NetworkRouter.GitHub.UserRepositories("OheroJ"))
-            .mapObject(ArgoUser.self)
-            .observeOn(MainScheduler.instance)
-            .subscribeNext { user in
-            success(user)
+            .request(NetworkRouter.GitHub.UserRepositories(name))
+            .mapArray(ArgoUser.self)
+//            .observeOn(MainScheduler.instance) // 这不需要
+            .subscribeNext { users in
+                print("是不是在主线程：\(NSThread.currentThread().isMainThread)")
+                success(users)
         }.addDisposableTo(disposeBag)
-        
     }
-    
 }

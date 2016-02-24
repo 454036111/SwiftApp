@@ -16,5 +16,4 @@ import RxSwift
 struct NetworkProcess {
     typealias ErrorHandle = ErrorType -> ()
     static let disposeBag = DisposeBag()
-    
 }
