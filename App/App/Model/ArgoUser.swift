@@ -66,7 +66,7 @@ struct ArgoUser {
     let downloads_url: String
     let stargazers_count: Int
     let watchers_count: Int
-    let language: String
+    let language: String?
     let has_pages: Bool
 }
 
@@ -105,7 +105,7 @@ extension ArgoUser: Decodable {
             <*> json <| "downloads_url"
             <*> json <| "stargazers_count"
             <*> json <| "watchers_count"
-            <*> json <| "language"
+            <*> json <|? "language"
             <*> json <| "has_pages"
         
         return ret
@@ -173,7 +173,7 @@ extension ArgoUser: Decodable {
         (_ downloads_url: String)
         (_ stargazers_count: Int)
         (_ watchers_count: Int)
-        (_ language: String)
+        (_ language: String?)
         (_ has_pages: Bool)-> ArgoUser{
             return ArgoUser(default_branch: default_branch, id: id, owner: owner, watchers: watchers, clone_url: clone_url, has_wiki: has_wiki, url: url, fork: fork, description: description, has_issues: has_issues, privat: privat, size: size, updated_at: updated_at, name: name, open_issues_count: open_issues_count, forks_count: forks_count, svn_url: svn_url, created_at: created_at, forks_url: forks_url, has_downloads: has_downloads, git_url: git_url, forks: forks, open_issues: open_issues, full_name: full_name, downloads_url: downloads_url, stargazers_count: stargazers_count, watchers_count: watchers_count, language: language, has_pages: has_pages)
             

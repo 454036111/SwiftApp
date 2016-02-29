@@ -98,7 +98,7 @@ class BroserCollectFlowLayout: UICollectionViewFlowLayout {
         visibleRect.size = (self.collectionView?.bounds.size)!
         for attributes in arr! {
             let distance = CGRectGetMidX(visibleRect) - attributes.center.x
-            let normalizedDistance = distance / UIScreen.mainScreen().bounds.size.width
+            let normalizedDistance = distance / visibleRect.size.width
             let zoom = 1 + 0.1*(1 - abs(normalizedDistance))
             attributes.transform3D = CATransform3DMakeScale(1.0, zoom, 1.0)
             attributes.zIndex = 1

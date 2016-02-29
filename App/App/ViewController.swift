@@ -10,7 +10,8 @@ import UIKit
 import SnapKit
 class ViewController: UIViewController {
     
-    @IBOutlet weak var cFlowLayout: UICollectionViewFlowLayout!
+    
+    @IBOutlet weak var cFlowLayout: BroserCollectFlowLayout!
     @IBOutlet weak var collectionView: UICollectionView!
     var models = [ArgoUser]()
     override func viewDidLoad() {
@@ -31,11 +32,11 @@ class ViewController: UIViewController {
     }
     func fetchData() {
         NetworkProcess.userRepositories("OHeroJ", success: { [weak self](ret) -> () in
-            if let ret = ret {
-//                ret.map({print($0.full_name)})
-                self?.models = ret
-                self?.collectionView.reloadData()
-            }
+                if let ret = ret {
+    //                ret.map({print($0.full_name)})
+                    self?.models = ret
+                    self?.collectionView.reloadData()
+                }
             
             }) { (err) -> () in
                 print(err)
