@@ -41,7 +41,7 @@
 	
 ###1. How to Create Observables ?
 
-1. empty: 
+1. `empty`: 
 
 		empty creates an empty sequence. 
 		The only message it sends is the .Completed message.
@@ -50,13 +50,13 @@
 
 		
 		
-2. never:
+2. `never`:
 
 		never creates a sequence that never sends any element or completes.
 		
 		let neverSequence = Observable<Int>.never()
 
-3. just (一个元素)
+3. `just` (一个元素)
 
 		just represents sequence that contains one element. 
 		It sends two messages to subscribers. 
@@ -65,17 +65,19 @@
 		
 		let singleElementSequence = Observable.just(32)
 		
-4. sequenceOf (一系列元素)
+4. `sequenceOf` (一系列元素)
 
 		sequenceOf creates a sequence of a fixed number of elements.
+
+		Observable.of
 		
-5. from (将swift的序列(SequenceType) 转换为事件序列)
+5. `from` (将swift的序列(SequenceType) 转换为事件序列)
 
 		from creates a sequence from SequenceType
 		
 		let sequenceFromArray = [1, 2, 3, 4, 5].toObservable()
 		
-6. create (通过闭包创建序列)
+6. `create` (通过闭包创建序列)
 
 		create creates sequence using Swift closure. 
 		This examples creates custom version of just operator.
@@ -97,7 +99,7 @@
 		
 		
 		
-7. generate
+7. `generate`
 
 
 		generate creates sequence that generates its values and determines 
@@ -113,14 +115,14 @@
            .subscribe { event in
             print(event)
         }
-8. failWith
+8. `failWith`
 
 		create an Observable that emits no items and terminates with an error
 		
 		let error = NSError(domain: "Test", code: -1, userInfo: nil)
     	let erroredSequence = Observable<Int>.error(error)
 
-9. deferred (加载延迟， 订阅者的内容相同而完全独立)
+9. `deferred` (加载延迟， 订阅者的内容相同而完全独立)
 
 		do not create the Observable until the observer subscribes, 
 		and create a fresh Observable for each observer
@@ -129,7 +131,7 @@
 
 ### 2. how to create Subjects
 
-1. PublishSubject（发送订阅者从订阅之后的事件序列）
+1. `PublishSubject`（发送订阅者从订阅之后的事件序列）
 
 		PublishSubject emits(发出) to an observer only those items that
 		are emitted by the source Observable(s) subsequent to the
@@ -156,7 +158,7 @@
 		
 		
 
-2. ReplaySubject (在新订阅对象订阅的时候会补发所有已经发送过的数据列， buffize: 是缓冲区的大小， 为1时，那么新订阅者出现的时候就补发上一个事件，如果是2， 就补发2个 ，...)
+2. `ReplaySubject` (在新订阅对象订阅的时候会补发所有已经发送过的数据列， buffize: 是缓冲区的大小， 为1时，那么新订阅者出现的时候就补发上一个事件，如果是2， 就补发2个 ，...)
 
 		ReplaySubject emits to any observer all of the items that
 		were emitted by the source Observable(s), regardless of 
@@ -185,7 +187,7 @@
 
 		
 
-3. BehaviorSubject (在新的订阅对象订阅的时候回发送最近发送的事件，如果没有，则发送一个默认值)
+3. `BehaviorSubject` (在新的订阅对象订阅的时候回发送最近发送的事件，如果没有，则发送一个默认值)
 
 		When an observer subscribes to a BehaviorSubject, it begins 
 		by emitting the item most recently emitted by the source 
@@ -218,7 +220,7 @@
 		2 - com
 		 
 
-4. Variable (是基于BehaviorSubject的一层封装， 它的优势： 不会被显示的终结，即：不会受到.Complete或者.Error这类终结事件，它会主动在析构的时候发送.Complete)
+4. `Variable` (是基于BehaviorSubject的一层封装， 它的优势： 不会被显示的终结，即：不会受到.Complete或者.Error这类终结事件，它会主动在析构的时候发送.Complete)
 		
 		Variable wraps BehaviorSubject. Advantage of using variable over
 		BehaviorSubject is that variable can never explicitly complete
@@ -240,19 +242,19 @@
 		
 ### 3. Transforming Observables
 
-1. map/select
+1. `map/select`
 
 	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/map.png)
 	
-	example("map") {
-	    let originalSequence = Observable.of(1, 2, 3)
-	
-	    _ = originalSequence
-	        .map { number in
-	            number * 2
-	        }
-	        .subscribe { print($0) }
-	}
+		example("map") {
+		    let originalSequence = Observable.of(1, 2, 3)
+		
+		    _ = originalSequence
+		        .map { number in
+		            number * 2
+		        }
+		        .subscribe { print($0) }
+		}
 
 
 
@@ -265,8 +267,8 @@
 	
 		
 		example("flatMap") {
-		    let sequenceInt = sequenceOf(1, 2, 3)
-		    let sequenceString = sequenceOf("A", "B","--")
+		    let sequenceInt = Observable.of(1, 2, 3)
+		    let sequenceString = Observable.of("A", "B","--")
 		
 		    _ = sequenceInt
 		        .flatMap { int in
@@ -298,7 +300,7 @@
 	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/scan.png)
 	
 		example("scan") {
-		    let sequenceToSum = sequenceOf(0, 1, 2, 3, 4, 5)
+		    let sequenceToSum = Observable.of(0, 1, 2, 3, 4, 5)
 		
 		    sequenceToSum
 		        .scan(0) { acum, elem in
@@ -325,7 +327,7 @@
    ![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/filter.png)
    
 		example("filter") {
-		    let subscription = sequenceOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+		    let subscription = Observable.of(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
 		        .filter {
 		            $0 % 2 == 0
 		        }
@@ -348,7 +350,7 @@
 	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/distinct.png)
 	
 		example("distinctUntilChanged") {
-		    let subscription = sequenceOf(1, 2, 3, 1, 1, 4)
+		    let subscription = Observable.of(1, 2, 3, 1, 1, 4)
 		        .distinctUntilChanged()
 		        .subscribe {
 		            print($0)
@@ -369,7 +371,7 @@
 	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/take.png)
 	
 		example("take") {
-		    let subscription = sequenceOf(1, 2, 3, 4, 5, 6)
+		    let subscription = Observable.of(1, 2, 3, 4, 5, 6)
 		        .take(3)
 		        .subscribe {
 		            print($0)
