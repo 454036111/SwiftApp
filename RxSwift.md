@@ -366,7 +366,7 @@
 		Completed
 
 	
-3. `take` 类似于Haskell的take
+3. `take` 类似于 Haskell 的 take 
 
 	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/take.png)
 	
@@ -378,6 +378,179 @@
 		        }
 		}
 		//
+		Next(1)
+		Next(2)
+		Next(3)
+		Completed
+
+
+### 5. Combining Observables
+
+1. `startWith`: 会在队列开始之前插入一个事件元素
+
+	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/startwith.png)
+	
+		example("startWith") { () -> () in
+		    let subscription = Observable.of(1,2,3,4,5,6)
+		        .startWith(0)
+		        .subscribe {
+		        print($0)
+		    }
+		}
+		//
+		Next(0)
+		Next(1)
+		Next(2)
+		Next(3)
+		Next(4)
+		Next(5)
+		Next(6)
+		Completed
+
+
+2. `combineLatest`: 
+
+	>when an item is emitted by either of two Observables, combine the latest item emitted by each Observable via a specified function and emit items based on the results of this function
+	
+	如果存在两条事件队列，需要同时监听，那么每当有新的事件发生的时候，combineLatest 会将每个队列的最新的一个元素进行合并。
+
+
+	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/combinelatest.png)
+	
+		example("combineLatest") { () -> () in
+		    let intOb1 = PublishSubject<String>()
+		    let intOb2 = PublishSubject<Int>()
+		    
+		    _ = Observable.combineLatest(intOb1, intOb2){ "\($0) \($1)" }.subscribe{
+		        print($0)
+		    }
+		    
+		    intOb1.on(.Next("S"))
+		    intOb2.on(.Next(1))
+		    intOb1.on(.Next("B"))
+		    intOb2.on(.Next(2))
+		}
+		// 
+		Next(S 1)
+		Next(B 1)
+		Next(B 2)
+	
+	
+
+
+3. `zip`
+
+	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/zip.png)
+	
+		example("zip ") {
+		    let intOb1 = PublishSubject<String>()
+		    let intOb2 = PublishSubject<Int>()
+		    
+		    _ = Observable.zip(intOb1, intOb2) {
+		        "\($0) \($1)"
+		        }
+		        .subscribe {
+		            print($0)
+		    }
+		    
+		    intOb1.on(.Next("S"))
+		    
+		    intOb2.on(.Next(1))
+		    
+		    intOb1.on(.Next("B"))
+		    
+		    intOb1.on(.Next("C"))
+		    
+		    intOb2.on(.Next(2))
+		}
+		//
+		--- zip  example ---
+		Next(S 1)
+		Next(B 2)
+
+
+	
+	
+	
+4. `merge`
+
+	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/merge.png)
+	
+		example("merge") {
+		    let subject1 = PublishSubject<Int>()
+		    let subject2 = PublishSubject<Int>()
+		    
+		    _ = Observable.of(subject1, subject2)
+		        .merge()
+		        .subscribeNext { int in
+		            print(int)
+		    }
+		    
+		    subject1.on(.Next(2))
+		    subject1.on(.Next(4))
+		    subject1.on(.Next(20))
+		    subject2.on(.Next(1))
+		    subject1.on(.Next(80))
+		    subject1.on(.Next(100))
+		    subject2.on(.Next(1))
+		}
+			
+	
+5. `switchLatest`
+
+	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/switch.png)
+
+		example("switchLatest") {
+		    let var1 = Variable(0)
+		    let var2 = Variable(200)
+		    // var3 is like an Observable<Observable<Int>>
+		    let var3 = Variable(var1.asObservable())
+		    let d = var3
+		        .asObservable()
+		        .switchLatest()
+		        .subscribe {
+		            print($0)
+		    }
+		    
+		    var1.value = 1  // 1
+		    var1.value = 2  // 2
+		    var1.value = 3  // 3
+		    var1.value = 4  // 4
+		    
+		    var3.value = var2.asObservable()  // 200
+		    var1.value = 5  // no print
+		    var2.value = 201 //201
+		
+		    var1.value = 5  // no print
+		    var1.value = 6  // no print
+		    var1.value = 7  // no print
+		}
+		
+		// 
+		Next(0)
+		Next(1)
+		Next(2)
+		Next(3)
+		Next(4)
+		Next(200)
+		Next(201)
+		Completed
+
+	
+### 6. Error Handing Operators
+
+### 7. Observable Utility Operators
+
+### 8. Conditional and Boolean Operators
+
+### 9. Mathematical and Aggregate Operators
+
+### 10. Connectable Observable Operatiors
+
+
+
+
+
 
 
 
