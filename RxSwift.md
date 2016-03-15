@@ -509,6 +509,20 @@
 	
 ### 6. Error Handing Operators
 
+1. `catchError`
+
+	> Operators that help to recover from error notifications from an Observable.
+	
+	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/catch.png)
+
+
+2. `retry`
+
+	> If a source Observable emits an error, resubscribe to it in the hopes that it will complete without error
+	
+	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/retry.png)
+
+
 ### 7. Observable Utility Operators
 
 ### 8. Conditional and Boolean Operators
