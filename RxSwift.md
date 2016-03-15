@@ -47,9 +47,7 @@
 		The only message it sends is the .Completed message.
 		
 		let emptySequence = Observable<Int>.empty()
-
-		
-		
+	
 2. `never`:
 
 		never creates a sequence that never sends any element or completes.
@@ -95,9 +93,6 @@
 	        .subscribe { event in
 	            print(event)
 	    }
-
-		
-		
 		
 7. `generate`
 
@@ -127,8 +122,6 @@
 		do not create the Observable until the observer subscribes, 
 		and create a fresh Observable for each observer
 		
-		
-
 ### 2. how to create Subjects
 
 1. `PublishSubject`（发送订阅者从订阅之后的事件序列）
@@ -155,9 +148,6 @@
 		1 - d
 		2 - d
 		
-		
-		
-
 2. `ReplaySubject` (在新订阅对象订阅的时候会补发所有已经发送过的数据列， buffize: 是缓冲区的大小， 为1时，那么新订阅者出现的时候就补发上一个事件，如果是2， 就补发2个 ，...)
 
 		ReplaySubject emits to any observer all of the items that
@@ -184,9 +174,6 @@
 		1 - d
 		2 - d 
 		
-
-		
-
 3. `BehaviorSubject` (在新的订阅对象订阅的时候回发送最近发送的事件，如果没有，则发送一个默认值)
 
 		When an observer subscribes to a BehaviorSubject, it begins 
@@ -256,8 +243,6 @@
 		        .subscribe { print($0) }
 		}
 
-
-
 2. `flatMap`
 
 	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/flatmap.png)
@@ -291,10 +276,6 @@
 		Next(--)
 		Completed
 		
-		
-
-
-
 3. `scan` 跟 swift上的reduce像
 
 	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/scan.png)
@@ -318,7 +299,6 @@
 		Next(10)
 		Next(15)
 		Completed
-
 
 ### 4. Filtering Obsservables
 
@@ -365,7 +345,6 @@
 		Next(4)
 		Completed
 
-	
 3. `take` 类似于 Haskell 的 take 
 
 	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/take.png)
@@ -382,7 +361,6 @@
 		Next(2)
 		Next(3)
 		Completed
-
 
 ### 5. Combining Observables
 
@@ -406,7 +384,6 @@
 		Next(5)
 		Next(6)
 		Completed
-
 
 2. `combineLatest`: 
 
@@ -435,9 +412,6 @@
 		Next(B 1)
 		Next(B 2)
 	
-	
-
-
 3. `zip`
 
 	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/zip.png)
@@ -468,10 +442,6 @@
 		Next(S 1)
 		Next(B 2)
 
-
-	
-	
-	
 4. `merge`
 
 	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/merge.png)
