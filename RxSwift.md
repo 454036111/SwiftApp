@@ -242,11 +242,8 @@
 
 1. map/select
 
-![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/map.png)
-
-[More info in reactive.io website]( http://reactivex.io/documentation/operators/map.html )
-
-		
+	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/map.png)
+	
 	example("map") {
 	    let originalSequence = Observable.of(1, 2, 3)
 	
@@ -257,7 +254,143 @@
 	        .subscribe { print($0) }
 	}
 
+
+
+2. `flatMap`
+
+	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/flatmap.png)
+
+
+		transform the items emitted by an Observable into Observables, then flatten the emissions from those into a single Observable.
+	
 		
+		example("flatMap") {
+		    let sequenceInt = sequenceOf(1, 2, 3)
+		    let sequenceString = sequenceOf("A", "B","--")
+		
+		    _ = sequenceInt
+		        .flatMap { int in
+		            sequenceString
+		        }
+		        .subscribe {
+		            print($0)
+		        }
+		}
+		
+		// 
+		Next(A)
+		Next(B)
+		Next(--)
+		Next(A)
+		Next(B)
+		Next(--)
+		Next(A)
+		Next(B)
+		Next(--)
+		Completed
+		
+		
+
+
+
+3. `scan` 跟 swift上的reduce像
+
+	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/scan.png)
+	
+		example("scan") {
+		    let sequenceToSum = sequenceOf(0, 1, 2, 3, 4, 5)
+		
+		    sequenceToSum
+		        .scan(0) { acum, elem in
+		            acum + elem
+		        }
+		        .subscribe {
+		            print($0)
+		        }
+		}
+		// 
+		Next(0)
+		Next(1)
+		Next(3)
+		Next(6)
+		Next(10)
+		Next(15)
+		Completed
+
+
+### 4. Filtering Obsservables
+
+1. `filter` 类似于swift
+
+   ![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/filter.png)
+   
+		example("filter") {
+		    let subscription = sequenceOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+		        .filter {
+		            $0 % 2 == 0
+		        }
+		        .subscribe {
+		            print($0)
+		        }
+		}
+		
+		// 
+		Next(0)
+		Next(2)
+		Next(4)
+		Next(6)
+		Next(8)
+		Completed
+  
+2. `distinctUntilChanged` 废弃掉重复事件
+
+	Suppress duplicate items emitted by an Observable
+	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/distinct.png)
+	
+		example("distinctUntilChanged") {
+		    let subscription = sequenceOf(1, 2, 3, 1, 1, 4)
+		        .distinctUntilChanged()
+		        .subscribe {
+		            print($0)
+		        }
+		}
+		
+		//
+		Next(1)
+		Next(2)
+		Next(3)
+		Next(1)
+		Next(4)
+		Completed
+
+	
+3. `take` 类似于Haskell的take
+
+	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/take.png)
+	
+		example("take") {
+		    let subscription = sequenceOf(1, 2, 3, 4, 5, 6)
+		        .take(3)
+		        .subscribe {
+		            print($0)
+		        }
+		}
+		//
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
 		
 
 
