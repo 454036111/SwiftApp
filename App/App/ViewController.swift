@@ -7,10 +7,9 @@
 //
 
 import UIKit
-import SnapKit
+
+// Index
 class ViewController: UIViewController {
-    
-    
     @IBOutlet weak var cFlowLayout: BroserCollectFlowLayout!
     @IBOutlet weak var collectionView: UICollectionView!
     var models = [ArgoUser]()
@@ -33,7 +32,6 @@ class ViewController: UIViewController {
     func fetchData() {
         NetworkProcess.userRepositories("OHeroJ", success: { [weak self](ret) -> () in
                 if let ret = ret {
-    //                ret.map({print($0.full_name)})
                     self?.models = ret
                     self?.collectionView.reloadData()
                 }
@@ -45,7 +43,6 @@ class ViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }
@@ -72,9 +69,6 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
        
     }
 
-    
-    
-    
 }
 
 

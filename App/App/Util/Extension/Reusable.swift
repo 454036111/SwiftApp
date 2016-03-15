@@ -8,6 +8,10 @@
 
 import UIKit
 
+
+/**
+ *  这个协议是为了在cell的 reuseIdentifier == cell's class name，而不向外部暴露类型
+ */
 protocol Reusable: class{
     static var reuseIdentifier: String { get }
     static var nib: UINib? { get }

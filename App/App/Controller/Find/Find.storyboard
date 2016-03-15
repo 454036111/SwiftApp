@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A2301" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BE4-A2-C60">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="nfR-ox-h4X">
+            <objects>
+                <viewController id="eik-Em-Kma" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="trD-kj-h5I"/>
+                        <viewControllerLayoutGuide type="bottom" id="p4o-fI-qtA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="goQ-rI-cgC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="h3B-rt-mo6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lgd-fQ-t1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1109" y="1109"/>
+        </scene>
+        <!--搜索-->
+        <scene sceneID="Fq9-RP-FdD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BE4-A2-C60" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="搜索" image="find_normal" selectedImage="find_hightlight" id="CZi-4g-1zF"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="scG-gM-Bz6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eik-Em-Kma" kind="relationship" relationship="rootViewController" id="UUE-50-4p1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TGR-AB-NxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="425" y="1098"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="find_hightlight" width="30" height="30"/>
+        <image name="find_normal" width="30" height="30"/>
+    </resources>
+</document>

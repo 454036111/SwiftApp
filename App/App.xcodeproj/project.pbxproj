@@ -26,6 +26,12 @@
 		245F4C0B1C7D94BC00F6A07D /* BroserCollectFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F4C0A1C7D94BC00F6A07D /* BroserCollectFlowLayout.swift */; };
 		245F4C0D1C7D9B4500F6A07D /* BroserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F4C0C1C7D9B4500F6A07D /* BroserCollectionViewCell.swift */; };
 		245F4C101C7DA05400F6A07D /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F4C0F1C7DA05400F6A07D /* Reusable.swift */; };
+		246D52061C9815D900BC19E3 /* Index.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246D52051C9815D900BC19E3 /* Index.storyboard */; };
+		246D52081C98167B00BC19E3 /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246D52071C98167B00BC19E3 /* Me.storyboard */; };
+		246D520B1C98174400BC19E3 /* Find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246D520A1C98174400BC19E3 /* Find.storyboard */; };
+		246D520D1C981EBE00BC19E3 /* ResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246D520C1C981EBE00BC19E3 /* ResourceProvider.swift */; };
+		246D52101C9820FF00BC19E3 /* RPColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246D520F1C9820FF00BC19E3 /* RPColor.swift */; };
+		246D52121C98210D00BC19E3 /* RPFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246D52111C98210D00BC19E3 /* RPFont.swift */; };
 		24765C8D1C7C567100124142 /* Response+Argo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24765C8C1C7C567100124142 /* Response+Argo.swift */; };
 		63FBFD6750CFAA993D515359 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D480C32AB988FD03F5B4695E /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -56,7 +62,7 @@
 		245B40501C7D56F5006E1BB6 /* NetworkProcessSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProcessSearch.swift; sourceTree = "<group>"; };
 		245DFDE71C7C0E94009FADFB /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		245DFDEA1C7C0E94009FADFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		245DFDEC1C7C0E94009FADFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		245DFDEC1C7C0E94009FADFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../ViewController.swift; sourceTree = "<group>"; };
 		245DFDEF1C7C0E94009FADFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		245DFDF11C7C0E94009FADFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		245DFDF41C7C0E94009FADFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,6 +80,12 @@
 		245F4C0A1C7D94BC00F6A07D /* BroserCollectFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BroserCollectFlowLayout.swift; sourceTree = "<group>"; };
 		245F4C0C1C7D9B4500F6A07D /* BroserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BroserCollectionViewCell.swift; sourceTree = "<group>"; };
 		245F4C0F1C7DA05400F6A07D /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		246D52051C9815D900BC19E3 /* Index.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Index.storyboard; sourceTree = "<group>"; };
+		246D52071C98167B00BC19E3 /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
+		246D520A1C98174400BC19E3 /* Find.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Find.storyboard; sourceTree = "<group>"; };
+		246D520C1C981EBE00BC19E3 /* ResourceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceProvider.swift; sourceTree = "<group>"; };
+		246D520F1C9820FF00BC19E3 /* RPColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPColor.swift; sourceTree = "<group>"; };
+		246D52111C98210D00BC19E3 /* RPFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPFont.swift; sourceTree = "<group>"; };
 		24765C8C1C7C567100124142 /* Response+Argo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Response+Argo.swift"; path = "../Router/Response+Argo.swift"; sourceTree = "<group>"; };
 		8EEB310B6B6D8D230DD634A5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D480C32AB988FD03F5B4695E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,7 +187,9 @@
 		245DFE1F1C7C1817009FADFB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				245DFDEC1C7C0E94009FADFB /* ViewController.swift */,
+				246D52091C98171400BC19E3 /* Find */,
+				246D52041C9815AB00BC19E3 /* Me */,
+				246D52031C98158F00BC19E3 /* Index */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -210,6 +224,7 @@
 		245DFE231C7C18B9009FADFB /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				246D520E1C98200000BC19E3 /* Config */,
 				245F4C0E1C7DA03900F6A07D /* Extension */,
 			);
 			path = Util;
@@ -241,6 +256,41 @@
 				245F4C0F1C7DA05400F6A07D /* Reusable.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		246D52031C98158F00BC19E3 /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				246D52051C9815D900BC19E3 /* Index.storyboard */,
+				245DFDEC1C7C0E94009FADFB /* ViewController.swift */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
+		246D52041C9815AB00BC19E3 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				246D52071C98167B00BC19E3 /* Me.storyboard */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		246D52091C98171400BC19E3 /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				246D520A1C98174400BC19E3 /* Find.storyboard */,
+			);
+			path = Find;
+			sourceTree = "<group>";
+		};
+		246D520E1C98200000BC19E3 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				246D520C1C981EBE00BC19E3 /* ResourceProvider.swift */,
+				246D520F1C9820FF00BC19E3 /* RPColor.swift */,
+				246D52111C98210D00BC19E3 /* RPFont.swift */,
+			);
+			name = Config;
 			sourceTree = "<group>";
 		};
 		9880A2D942AFF0AD4F7A3140 /* Frameworks */ = {
@@ -369,7 +419,10 @@
 			files = (
 				245DFDF51C7C0E94009FADFB /* LaunchScreen.storyboard in Resources */,
 				245DFDF21C7C0E94009FADFB /* Assets.xcassets in Resources */,
+				246D52081C98167B00BC19E3 /* Me.storyboard in Resources */,
 				245DFDF01C7C0E94009FADFB /* Main.storyboard in Resources */,
+				246D52061C9815D900BC19E3 /* Index.storyboard in Resources */,
+				246D520B1C98174400BC19E3 /* Find.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,15 +499,18 @@
 				245F4C0D1C7D9B4500F6A07D /* BroserCollectionViewCell.swift in Sources */,
 				245DFE191C7C1243009FADFB /* README.md in Sources */,
 				24498F601C7C5D97005A6611 /* ArgoUser.swift in Sources */,
+				246D520D1C981EBE00BC19E3 /* ResourceProvider.swift in Sources */,
 				245F4C0B1C7D94BC00F6A07D /* BroserCollectFlowLayout.swift in Sources */,
 				245B404D1C7D4934006E1BB6 /* NetworkRouterSearch.swift in Sources */,
 				245DFE2F1C7C49B4009FADFB /* NetworkRouter.swift in Sources */,
+				246D52121C98210D00BC19E3 /* RPFont.swift in Sources */,
 				24498F641C7C6873005A6611 /* Observable+Argo.swift in Sources */,
 				245DFDED1C7C0E94009FADFB /* ViewController.swift in Sources */,
 				245F4C101C7DA05400F6A07D /* Reusable.swift in Sources */,
 				24765C8D1C7C567100124142 /* Response+Argo.swift in Sources */,
 				245DFE311C7C49C3009FADFB /* NetworkProcess.swift in Sources */,
 				24498F621C7C5E75005A6611 /* NetworkProcessGithub.swift in Sources */,
+				246D52101C9820FF00BC19E3 /* RPColor.swift in Sources */,
 				245DFE331C7C4BA3009FADFB /* NetworkRouterGithub.swift in Sources */,
 				245DFDEB1C7C0E94009FADFB /* AppDelegate.swift in Sources */,
 			);
