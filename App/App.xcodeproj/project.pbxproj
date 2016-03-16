@@ -86,6 +86,8 @@
 		246D520C1C981EBE00BC19E3 /* ResourceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceProvider.swift; sourceTree = "<group>"; };
 		246D520F1C9820FF00BC19E3 /* RPColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPColor.swift; sourceTree = "<group>"; };
 		246D52111C98210D00BC19E3 /* RPFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPFont.swift; sourceTree = "<group>"; };
+		2475FC791C9930C0009DB8A6 /* Learn01.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Learn01.playground; sourceTree = "<group>"; };
+		2475FC7A1C993EFE009DB8A6 /* Learn02.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Learn02.playground; sourceTree = "<group>"; };
 		24765C8C1C7C567100124142 /* Response+Argo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Response+Argo.swift"; path = "../Router/Response+Argo.swift"; sourceTree = "<group>"; };
 		8EEB310B6B6D8D230DD634A5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D480C32AB988FD03F5B4695E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +153,7 @@
 		245DFDE91C7C0E94009FADFB /* App */ = {
 			isa = PBXGroup;
 			children = (
+				2475FC781C99309D009DB8A6 /* Playground */,
 				245DFE231C7C18B9009FADFB /* Util */,
 				245DFE201C7C182D009FADFB /* Model */,
 				245DFE211C7C182D009FADFB /* Network */,
@@ -291,6 +294,15 @@
 				246D52111C98210D00BC19E3 /* RPFont.swift */,
 			);
 			name = Config;
+			sourceTree = "<group>";
+		};
+		2475FC781C99309D009DB8A6 /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				2475FC791C9930C0009DB8A6 /* Learn01.playground */,
+				2475FC7A1C993EFE009DB8A6 /* Learn02.playground */,
+			);
+			name = Playground;
 			sourceTree = "<group>";
 		};
 		9880A2D942AFF0AD4F7A3140 /* Frameworks */ = {
