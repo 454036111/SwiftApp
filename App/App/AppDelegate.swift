@@ -25,8 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     #endif
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
+        debugLog("hello world")
         return true
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {

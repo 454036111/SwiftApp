@@ -101,6 +101,7 @@
 		24B3731A1C9A9B890095AEB0 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		24B3731C1C9A9B940095AEB0 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		24B3731E1C9AB5610095AEB0 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		24B373241C9AC00A0095AEB0 /* Learn03.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Learn03.playground; sourceTree = "<group>"; };
 		8EEB310B6B6D8D230DD634A5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D480C32AB988FD03F5B4695E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -315,6 +316,7 @@
 			children = (
 				2475FC791C9930C0009DB8A6 /* Learn01.playground */,
 				2475FC7A1C993EFE009DB8A6 /* Learn02.playground */,
+				24B373241C9AC00A0095AEB0 /* Learn03.playground */,
 			);
 			name = Playground;
 			sourceTree = "<group>";

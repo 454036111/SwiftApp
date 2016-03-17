@@ -524,12 +524,59 @@
 
 
 ### 7. Observable Utility Operators
+1. `subscribe`
+2. `subscribeNext`
+3. `subscribeCompleted`
+4. `subscribeError`
+5. `doOn`
+
+	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/do.png)
+
+
 
 ### 8. Conditional and Boolean Operators
 
+1. `takeUntil`
+
+	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/takeuntil.png)
+
+2. `takeWhile`
+
+	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/takewhile.png)
+
+
+
 ### 9. Mathematical and Aggregate Operators
+1. `concat`
+
+	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/concat.png)
+2. `reduce`
+
+	
+	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/reduce.png)
+	
+		example("reduce") {
+		    _ = Observable.of(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+		        .reduce(0, accumulator: +)
+		        .subscribe {
+		            print($0)
+		        }
+		}
+		// 
+		Next(45)
+		Completed
 
 ### 10. Connectable Observable Operatiors
+
+1. `multicast`
+2.  `replay`
+
+	![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/replay.png)
+	Ensure that all observers see the same sequence of emitted items, even if they subscribe after the Observable has begun emitting items.
+3. `publish`
+	
+	Convert an ordinary Observable into a connectable Observable.
+
 
 
 
