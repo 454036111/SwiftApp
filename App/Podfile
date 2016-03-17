@@ -10,4 +10,15 @@ pod 'Moya/RxSwift'
 pod 'Argo', '~> 2.2.0'
 pod 'Curry', '~> 1.4.0'
 
+# logging system
+pod 'SwiftyBeaver', '~> 0.4.1'
+# only for debug
+pod 'Watchdog', '~> 2.0', :configurations => ['Debug']
+
+
+
+target :AppTests do
+
+end
+
 

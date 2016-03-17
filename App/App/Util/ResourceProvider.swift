@@ -8,13 +8,13 @@
 
 import Foundation
 
+/// 假借命名空间
 class ResourceProvider {
     struct Color {}
     struct Font {}
     let color = Color()
     let font = Font()
 }
-
 
 
 extension ResourceProvider {

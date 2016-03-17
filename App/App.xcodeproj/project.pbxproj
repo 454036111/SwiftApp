@@ -38,6 +38,7 @@
 		24B373191C9A98DD0095AEB0 /* MutableBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B373181C9A98DD0095AEB0 /* MutableBox.swift */; };
 		24B3731B1C9A9B890095AEB0 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3731A1C9A9B890095AEB0 /* Result.swift */; };
 		24B3731D1C9A9B940095AEB0 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3731C1C9A9B940095AEB0 /* Error.swift */; };
+		24B3731F1C9AB5610095AEB0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B3731E1C9AB5610095AEB0 /* Config.swift */; };
 		63FBFD6750CFAA993D515359 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D480C32AB988FD03F5B4695E /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		24B373181C9A98DD0095AEB0 /* MutableBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutableBox.swift; sourceTree = "<group>"; };
 		24B3731A1C9A9B890095AEB0 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		24B3731C1C9A9B940095AEB0 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		24B3731E1C9AB5610095AEB0 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		8EEB310B6B6D8D230DD634A5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D480C32AB988FD03F5B4695E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -303,6 +305,7 @@
 				246D520C1C981EBE00BC19E3 /* ResourceProvider.swift */,
 				246D520F1C9820FF00BC19E3 /* RPColor.swift */,
 				246D52111C98210D00BC19E3 /* RPFont.swift */,
+				24B3731E1C9AB5610095AEB0 /* Config.swift */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				24B3731D1C9A9B940095AEB0 /* Error.swift in Sources */,
 				24B373151C9A98B60095AEB0 /* Box.swift in Sources */,
 				245DFE191C7C1243009FADFB /* README.md in Sources */,
+				24B3731F1C9AB5610095AEB0 /* Config.swift in Sources */,
 				24498F601C7C5D97005A6611 /* ArgoUser.swift in Sources */,
 				246D520D1C981EBE00BC19E3 /* ResourceProvider.swift in Sources */,
 				245F4C0B1C7D94BC00F6A07D /* BroserCollectFlowLayout.swift in Sources */,
@@ -715,6 +719,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.zuijiao.com.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -727,6 +732,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.zuijiao.com.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Release;
 		};

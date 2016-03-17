@@ -8,14 +8,24 @@
 
 import UIKit
 
+#if DEBUG
+    import Watchdog
+#endif
+
+
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    #if DEBUG
+    let watchDog = Watchdog()
+    #endif
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
         return true
     }
 
