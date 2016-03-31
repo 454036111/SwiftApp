@@ -13,7 +13,14 @@ import RxSwift
 
 
 // 待留扩展用
-struct NetworkProcess {
+public struct Process {
     typealias ErrorHandle = ErrorType -> ()
     static let disposeBag = DisposeBag()
+    
+    
+    public let configuration: TokenConfiguration
+    
+    public init (_ config: TokenConfiguration = TokenConfiguration()) {
+        configuration = config
+    }
 }

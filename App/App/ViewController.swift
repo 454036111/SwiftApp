@@ -30,15 +30,15 @@ class ViewController: UIViewController {
         fetchData()
     }
     func fetchData() {
-        NetworkProcess.userRepositories("OHeroJ", success: { [weak self](ret) -> () in
-                if let ret = ret {
-                    self?.models = ret
-                    self?.collectionView.reloadData()
-                }
-            
-            }) { (err) -> () in
-                print(err)
-        }
+//        NetworkProcess.userRepositories("OHeroJ", success: { [weak self](ret) -> () in
+//                if let ret = ret {
+//                    self?.models = ret
+//                    self?.collectionView.reloadData()
+//                }
+//            
+//            }) { (err) -> () in
+//                print(err)
+//        }
     }
     
     override func didReceiveMemoryWarning() {
