@@ -12,7 +12,7 @@ class BroserCollectionViewCell: UICollectionViewCell, Reusable {
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var descLbl: UILabel!
-    var model: ArgoUser?
+//    var model: ArgoUser?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,10 +34,10 @@ class BroserCollectionViewCell: UICollectionViewCell, Reusable {
         
     }
     
-    func bindModel(model: ArgoUser) {
-        self.model = model
-        nameLbl.text = model.full_name
-        descLbl.text = model.description
-    }
+//    func bindModel(model: ArgoUser) {
+//        self.model = model
+//        nameLbl.text = model.full_name
+//        descLbl.text = model.description
+//    }
     
 }

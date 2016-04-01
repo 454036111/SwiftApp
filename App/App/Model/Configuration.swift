@@ -47,18 +47,6 @@ public struct OAuthConfiguration: Configuration {
         self.scopes = scopes
     }
     
-    public func authenticate() -> NSURL? {
-        return  NSURL(string: Router.OAuth.Authorize(self).requestUrlStr())
-    }
-    
-    public func authorize(code: String, completion: (config: TokenConfiguration) -> Void) {
-//        let request = Router.OAuth.AccessToken(self , code)
-        
-        
-        
-        
-    }
-    
 
 }
 

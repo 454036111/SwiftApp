@@ -12,7 +12,8 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var cFlowLayout: BroserCollectFlowLayout!
     @IBOutlet weak var collectionView: UICollectionView!
-    var models = [ArgoUser]()
+    
+    var models = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -59,7 +60,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(indexPath: indexPath) as BroserCollectionViewCell
-        cell.bindModel(models[indexPath.row])
+//        cell.bindModel(models[indexPath.row])
         
         return cell
     }

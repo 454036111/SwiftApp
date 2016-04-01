@@ -81,6 +81,16 @@ extension Dictionary{
 public enum Openness: String {
     case Open = "open"
     case Closed = "closed"
+    static func transform(string: String?) -> Openness? {
+        if string == "open" {
+            return .Open
+        } else if string == "closed" {
+            return .Closed
+        } else {
+            return .None
+        }
+        
+    }
 }
 
 /**

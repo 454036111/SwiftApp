@@ -15,7 +15,7 @@ import RxSwift
 // 待留扩展用
 public struct Process {
     typealias ErrorHandle = ErrorType -> ()
-    static let disposeBag = DisposeBag()
+    let disposeBag = DisposeBag()
     
     
     public let configuration: TokenConfiguration

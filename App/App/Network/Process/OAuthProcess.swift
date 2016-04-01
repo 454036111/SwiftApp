@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import RxSwift
 
+// 这个比较特殊，不放到Process上
 public struct OAuthProcess {
 
     public func authorize(code: String, configtion: OAuthConfiguration, completion: (config: TokenConfiguration?) -> Void) {
@@ -18,7 +20,7 @@ public struct OAuthProcess {
                 let config = TokenConfiguration(accessToken, url: configtion.apiEndpoint)
                 completion(config: config)
             }
-        }.addDisposableTo(Process.disposeBag)
+        }.addDisposableTo(DisposeBag())
     }
     
     public func accessTokenFromResponse(response: String) -> String? {

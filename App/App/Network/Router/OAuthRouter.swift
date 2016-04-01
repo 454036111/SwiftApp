@@ -66,19 +66,14 @@ extension Router.OAuth: RouterProtocol {
     
     var provider: RxMoyaProvider<Router.OAuth> {
         let endpointClosure = { (target: Router.OAuth) -> Endpoint<Router.OAuth> in
-            let url = target.requestUrlStr()
+            let url = target.baseURL.URLByAppendingPathComponent(target.path).absoluteString
             return Endpoint(URL: url, sampleResponseClosure: {.NetworkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters, parameterEncoding: target.encoding)
         }
         return RxMoyaProvider<Router.OAuth>(endpointClosure: endpointClosure)
     }
 }
 
-extension Router.OAuth {
-    func requestUrlStr() -> String{
-        return  baseURL.URLByAppendingPathComponent(path).absoluteString
-    }
-    
-}
+
 
 
 

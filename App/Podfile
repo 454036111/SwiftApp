@@ -7,15 +7,13 @@ use_frameworks!
 pod 'SnapKit', '~> 0.19.1'
 pod 'Moya', '~> 6.1.3'
 pod 'Moya/RxSwift'
-pod 'Argo', '~> 2.2.0'
-pod 'Curry', '~> 1.4.0'
+pod 'Argo', '~> 2.3.0'
+pod 'Curry', '~> 2.0.0'
 
 # logging system
 pod 'SwiftyBeaver', '~> 0.4.1'
 # only for debug
 pod 'Watchdog', '~> 2.0', :configurations => ['Debug']
-
-
 
 target :AppTests do
 
