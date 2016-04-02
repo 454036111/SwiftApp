@@ -48,5 +48,6 @@ extension Router.User: RouterProtocol {
             return Endpoint(URL: url, sampleResponseClosure: {.NetworkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters, parameterEncoding: target.encoding)
         }
         return RxMoyaProvider<Router.User>(endpointClosure: endpointClosure)
+
     }
 }

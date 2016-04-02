@@ -12,6 +12,9 @@ import Moya
 import RxSwift
 
 
+public typealias Github = Process
+
+
 // 待留扩展用
 public struct Process {
     typealias ErrorHandle = ErrorType -> ()

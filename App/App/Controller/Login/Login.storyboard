@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="vfM-l4-QHh">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" hidesBottomBarWhenPushed="YES" id="0yF-x5-Xl3" customClass="LoginViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9fW-gT-atI"/>
+                        <viewControllerLayoutGuide type="bottom" id="VG9-Rf-Kht"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="84C-sj-jlS">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLD-gy-Xw5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0yF-x5-Xl3" id="ctk-Da-bTh"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="WLD-gy-Xw5" secondAttribute="trailing" constant="-20" id="1CR-TQ-kpd"/>
+                            <constraint firstItem="WLD-gy-Xw5" firstAttribute="top" secondItem="9fW-gT-atI" secondAttribute="bottom" id="Fjv-44-Juu"/>
+                            <constraint firstItem="VG9-Rf-Kht" firstAttribute="top" secondItem="WLD-gy-Xw5" secondAttribute="bottom" id="Wdi-Tg-yBw"/>
+                            <constraint firstItem="WLD-gy-Xw5" firstAttribute="leading" secondItem="84C-sj-jlS" secondAttribute="leadingMargin" constant="-20" id="jdq-kd-RXb"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Login" id="eRn-5q-zb3"/>
+                    <connections>
+                        <outlet property="webView" destination="WLD-gy-Xw5" id="zpR-Mg-F3G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aZR-XW-5X3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1350" y="283"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PuW-Po-HOe">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xjc-L5-Ouo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="LonginEnter" automaticallyAdjustsScrollViewInsets="NO" id="9dH-Is-qcv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5za-Wa-R5c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0yF-x5-Xl3" kind="relationship" relationship="rootViewController" id="GBl-hi-N03"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="538" y="283"/>
+        </scene>
+    </scenes>
+</document>

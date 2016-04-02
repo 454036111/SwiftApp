@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 public extension Process {
     public func myFollower(completion: (response: [User]) -> Void ) {
         let router = Router.Follow.ReadAuthenticatedFollowers(configuration)
@@ -40,19 +39,5 @@ public extension Process {
             }.addDisposableTo(disposeBag)
         
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
 }

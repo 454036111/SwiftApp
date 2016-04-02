@@ -24,7 +24,7 @@ public struct TokenConfiguration: Configuration {
     public var apiEndpoint: String
     public var accessToken: String?
     
-    public init(_ token: String? = nil, url: String = Router.githubWebURL){
+    public init(token: String? = nil, url: String = Router.githubWebURL){
         apiEndpoint = url
         accessToken = token
     }
@@ -38,7 +38,7 @@ public struct OAuthConfiguration: Configuration {
     public let scopes: [String]
     public let webEndpoint: String
     
-    public init(_ url: String = Router.githubBaseURL, webURL: String = Router.githubWebURL,
+    public init(url: String = Router.githubBaseURL, webURL: String = Router.githubWebURL,
                   token: String, secret: String, scopes: [String]) {
         apiEndpoint = url
         webEndpoint = webURL

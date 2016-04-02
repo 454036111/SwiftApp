@@ -16,8 +16,23 @@ class ViewController: UIViewController {
     var models = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        
+        Github().user("OHeroJ") { (response) in
+            print(response)
+        }
+//        setup()
     }
+    
+    func openURL(url: NSURL) -> Bool{
+        if UIApplication.sharedApplication().canOpenURL(url) {
+            UIApplication.sharedApplication().openURL(url)
+            return true
+        }else {
+            return false
+        }
+    }
+    
+    
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
         
