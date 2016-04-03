@@ -9,6 +9,10 @@
 import Foundation
 import RxSwift
 
+import Moya
+
+private var oauthProvider = RxMoyaProvider<Router.OAuth>()
+
 public extension Process {
     public func authenticate(config: OAuthConfiguration) -> NSURL? {
         let router = Router.OAuth.Authorize(config)
@@ -34,18 +38,15 @@ public extension Process {
     
     public  func authorize(code: String, configtion: OAuthConfiguration, completion: (config: TokenConfiguration?) -> Void) {
         let router = Router.OAuth.AccessToken(configtion, code)
+        oauthProvider = router.provider
+        oauthProvider.request(router).mapString().subscribeNext { (ret) in
+            let accessToken = self.accessTokenFromResponse(ret)
+            if let accessToken = accessToken {
+                let config = TokenConfiguration(token: accessToken, url: configtion.apiEndpoint)
+                completion(config: config)
+            }
         
-        router.provider.request(router).subscribeNext { (res) in
-            print("😊😊😊😊😊😊accessToken:\(res)")
         }.addDisposableTo(disposeBag)
-//        router.provider.request(router).mapString().subscribeNext { (ret) in
-//            let accessToken = self.accessTokenFromResponse(ret)
-//            if let accessToken = accessToken {
-//                let config = TokenConfiguration(token: accessToken, url: configtion.apiEndpoint)
-//                completion(config: config)
-//            }
-//        
-//        }.addDisposableTo(disposeBag)
     }
     
     public  func accessTokenFromResponse(response: String) -> String? {

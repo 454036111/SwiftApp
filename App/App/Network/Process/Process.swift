@@ -19,8 +19,6 @@ public typealias Github = Process
 public struct Process {
     typealias ErrorHandle = ErrorType -> ()
     let disposeBag = DisposeBag()
-    
-    
     public let configuration: TokenConfiguration
     
     public init (_ config: TokenConfiguration = TokenConfiguration()) {

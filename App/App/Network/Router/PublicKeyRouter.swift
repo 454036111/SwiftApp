@@ -47,7 +47,7 @@ extension Router.PublicKey: RouterProtocol {
     }
     
     var baseURL: NSURL {
-        return NSURL(string: Router.githubWebURL)!
+        return NSURL(string: Router.githubBaseURL)!
     }
     
     var provider: RxMoyaProvider<Router.PublicKey> {

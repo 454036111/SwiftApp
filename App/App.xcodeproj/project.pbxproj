@@ -52,6 +52,7 @@
 		84ACC6021CAD66B0004E13FD /* RepositoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACC6011CAD66B0004E13FD /* RepositoryRouter.swift */; };
 		84ACC6041CAD67AD004E13FD /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACC6031CAD67AD004E13FD /* UserRouter.swift */; };
 		84ACC6061CAD6858004E13FD /* StarsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACC6051CAD6858004E13FD /* StarsRouter.swift */; };
+		84FAA2501CB0244000FC258C /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAA24F1CB0244000FC258C /* Segue.swift */; };
 		84FCE0091CAEBB2C00A3A9AE /* PublicKeyProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCE0081CAEBB2C00A3A9AE /* PublicKeyProcess.swift */; };
 		84FCE00B1CAEC17D00A3A9AE /* RepositoryProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCE00A1CAEC17D00A3A9AE /* RepositoryProcess.swift */; };
 		84FCE00D1CAECD0500A3A9AE /* UserProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FCE00C1CAECD0500A3A9AE /* UserProcess.swift */; };
@@ -133,6 +134,7 @@
 		84ACC6011CAD66B0004E13FD /* RepositoryRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryRouter.swift; sourceTree = "<group>"; };
 		84ACC6031CAD67AD004E13FD /* UserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
 		84ACC6051CAD6858004E13FD /* StarsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsRouter.swift; sourceTree = "<group>"; };
+		84FAA24F1CB0244000FC258C /* Segue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		84FCE0081CAEBB2C00A3A9AE /* PublicKeyProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PublicKeyProcess.swift; path = App/Network/PublicKeyProcess.swift; sourceTree = SOURCE_ROOT; };
 		84FCE00A1CAEC17D00A3A9AE /* RepositoryProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryProcess.swift; sourceTree = "<group>"; };
 		84FCE00C1CAECD0500A3A9AE /* UserProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProcess.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 		245DFE1F1C7C1817009FADFB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				84FAA24F1CB0244000FC258C /* Segue.swift */,
 				84FCE0171CAF5D7500A3A9AE /* Login */,
 				246D52091C98171400BC19E3 /* Find */,
 				246D52041C9815AB00BC19E3 /* Me */,
@@ -646,6 +649,7 @@
 				84ACC5EE1CACB628004E13FD /* FollowProcess.swift in Sources */,
 				246D52121C98210D00BC19E3 /* RPFont.swift in Sources */,
 				24B3731B1C9A9B890095AEB0 /* Result.swift in Sources */,
+				84FAA2501CB0244000FC258C /* Segue.swift in Sources */,
 				245DFDED1C7C0E94009FADFB /* ViewController.swift in Sources */,
 				245F4C101C7DA05400F6A07D /* Reusable.swift in Sources */,
 				84FCE00F1CAECF8200A3A9AE /* StartsProcess.swift in Sources */,

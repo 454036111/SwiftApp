@@ -12,10 +12,6 @@ import UIKit
     import Watchdog
 #endif
 
-
-
-
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -25,12 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let watchDog = Watchdog()
     #endif
     
-    
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         debugLog("hello world")
         return true
-        
     }
 
     func applicationWillResignActive(application: UIApplication) {

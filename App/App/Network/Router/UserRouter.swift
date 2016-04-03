@@ -35,11 +35,19 @@ extension Router.User: RouterProtocol {
     }
     
     var parameters: [String: AnyObject]? {
+        switch self {
+        case .ReadAuthenticatedUser(let config):
+            if let accessToken = config.accessToken {
+                return [config.accessTokenFieldName: accessToken]
+            }
+        case .ReadUser:
+            break
+        }
         return [:]
     }
     
     var baseURL: NSURL {
-        return NSURL(string: Router.githubWebURL)!
+        return NSURL(string: Router.githubBaseURL)!
     }
     
     var provider: RxMoyaProvider<Router.User> {
@@ -47,7 +55,7 @@ extension Router.User: RouterProtocol {
             let url = target.baseURL.URLByAppendingPathComponent(target.path).absoluteString
             return Endpoint(URL: url, sampleResponseClosure: {.NetworkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters, parameterEncoding: target.encoding)
         }
-        return RxMoyaProvider<Router.User>(endpointClosure: endpointClosure)
+        return RxMoyaProvider<Router.User>(endpointClosure: endpointClosure, plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: JSONResponseDataFormatter)])
 
     }
 }

@@ -128,13 +128,15 @@
                     <navigationItem key="navigationItem" title="GitHub" id="uLJ-Cu-Bw0">
                         <barButtonItem key="rightBarButtonItem" title="login" id="upv-cm-5BU">
                             <connections>
-                                <segue destination="1Z5-EI-x08" kind="show" id="BqP-Ze-7Sm"/>
+                                <action selector="loginBtnClick:" destination="BYZ-38-t0r" id="l4k-tD-9pr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="cFlowLayout" destination="2f7-w1-tP2" id="NXk-9c-Tvo"/>
                         <outlet property="collectionView" destination="op5-Pv-TbO" id="Fh4-tE-jcb"/>
+                        <outlet property="loginBtn" destination="upv-cm-5BU" id="hNO-ao-i16"/>
+                        <segue destination="1Z5-EI-x08" kind="show" identifier="LoginSegue" id="9TH-mq-9n1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

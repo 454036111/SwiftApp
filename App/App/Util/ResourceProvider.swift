@@ -14,6 +14,7 @@ class ResourceProvider {
     struct Font {}
     let color = Color()
     let font = Font()
+    
 }
 
 

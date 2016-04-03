@@ -13,14 +13,33 @@ class ViewController: UIViewController {
     @IBOutlet weak var cFlowLayout: BroserCollectFlowLayout!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var loginBtn: UIBarButtonItem!
+    var github: Github = Github()
     var models = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Github().user("OHeroJ") { (response) in
+        github.user("OHeroJ") { (response) in
             print(response)
         }
 //        setup()
+    }
+    
+    @IBAction func loginBtnClick(sender: UIBarButtonItem) {
+        if sender.title == "logout" {
+            return ()
+        } else {
+            performSegueWithIdentifier(Segue.Index.LonginSegue.rawValue, sender: nil)
+        }
+        
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if let _ = Constans.getValue(.AccessToken) {
+            loginBtn.title = "logout"
+        }else {
+            loginBtn.title = "login"
+        }
     }
     
     func openURL(url: NSURL) -> Bool{

@@ -50,9 +50,13 @@ extension LoginViewController: UIWebViewDelegate {
     }
     
     func loadCurrentUser(config: TokenConfiguration) {
+        
+        // 保存accessToken
+        Constans.save(config.accessToken, key: .AccessToken)
         Github(config).me { (response) in
             print(response.login)
         }
+        navigationController?.popViewControllerAnimated(true)
         
     }
 

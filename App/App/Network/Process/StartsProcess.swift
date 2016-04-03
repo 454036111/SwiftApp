@@ -7,12 +7,15 @@
 //
 
 import Foundation
+import Moya
 
+private var starProvider = RxMoyaProvider<Router.Stars>()
 public extension Process {
     
     public func stars(name:String, completion:(reponse: [Repository]) -> Void) {
         let router = Router.Stars.ReadStars(name, configuration)
-        router.provider.request(router).mapArray(Repository.self).subscribeNext { (res) in
+        starProvider = router.provider
+        starProvider.request(router).mapArray(Repository.self).subscribeNext { (res) in
             completion(reponse: res)
         }.addDisposableTo(disposeBag)
     }
